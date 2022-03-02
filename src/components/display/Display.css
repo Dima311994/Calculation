@@ -9,6 +9,8 @@
 }
 
 .output-result {
+	text-align: end;
   margin-right: 20px;
   font-size: 2rem;
+  outline: none;
 }

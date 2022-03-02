@@ -1,0 +1,14 @@
+.display-cont {
+  height: 20vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 40px;
+  border: 1px solid #000;
+  background: red;
+}
+
+.output-result {
+  margin-right: 20px;
+  font-size: 2rem;
+}

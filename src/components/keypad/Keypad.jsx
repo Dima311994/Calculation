@@ -1,9 +1,7 @@
 import React, { PureComponent } from "react";
 import numberOperand from "../../constants/numberOperand";
 export default class Keypad extends PureComponent {
-  constructor(props) {
-    super(props);
-  }
+  
 
   render() {
     return (

@@ -1,12 +1,18 @@
 @import "./components/header/Header.css";
 @import "./components/display/Display.css";
-@import "./components/keypad/Keypad.css";
-@import "./components/history/History.css";
 @import "./App.css";
 @import "./components/calculator/Calculator.css";
+@import "./components/setting-page/SettingPage.css";
+@import "./components/keypad/Keypad.css";
+@import "./components/history/History.css";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

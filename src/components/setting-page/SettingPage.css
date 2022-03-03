@@ -1,0 +1,40 @@
+.setting-cont {
+  width: 30%;
+  height: 300px;
+  margin: 150px;
+  margin-top: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.setting-cont_title {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.title-theme {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.dropdown-theme {
+  width: 60%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.myArrowClassName {
+  margin-top: 8px;
+}
+
+.btn-clear {
+  width: 60%;
+  height: 45px;
+  margin-bottom: 40px;
+  text-align: start;
+  padding-left: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}

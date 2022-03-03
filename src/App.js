@@ -1,15 +1,16 @@
 import Header from "./components/header/Header";
-import History from "./components/history/History";
-import Calculator from "./components/calculator/Calculator";
+import SettingPage from "./components/setting-page/SettingPage";
+import ControlPanel from "./components/control-panel/ControlPanel";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Header />
-      <div className="cont-display-key-history">
-        <Calculator />
-        <History />
-      </div>
+      <Routes>
+        <Route path="/" element={<ControlPanel />} />
+        <Route path="/setting" element={<SettingPage />} />
+      </Routes>
     </>
   );
 }

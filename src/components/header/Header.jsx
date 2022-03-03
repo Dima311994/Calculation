@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { Link } from "react-router-dom";
 
 export default class Header extends PureComponent {
   render() {
@@ -8,8 +9,12 @@ export default class Header extends PureComponent {
           <h1>Calculation App</h1>
         </div>
         <div className="header-cont__rout rout rout_font-size-big">
-          <div>Home</div>
-          <div>Setting</div>
+          <Link to="/">
+            <div>Home</div>
+          </Link>
+          <Link to="setting">
+            <div>Setting</div>
+          </Link>
         </div>
       </nav>
     );

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Display from "../display/Display";
 import Keypad from "../keypad/Keypad";
 
-export default class DisplayKeypad extends Component {
+export default class Calculator extends Component {
   constructor(props) {
     super(props);
     this.state = {

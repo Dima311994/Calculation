@@ -1,16 +1,16 @@
 .display-cont {
+	width: 90%;
+	margin-left: 65px;
   height: 20vh;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   padding: 40px;
-  border: 1px solid #000;
-  background: red;
+  border-bottom: 3px solid gray;
 }
 
 .output-result {
-	text-align: end;
+  text-align: end;
   margin-right: 20px;
   font-size: 2rem;
-  outline: none;
 }

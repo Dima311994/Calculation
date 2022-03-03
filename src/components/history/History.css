@@ -1,6 +1,7 @@
 .history-cont{
 	width: 30%;
-	height: 90vh;
-	background: purple;
-	border: 1px solid #000;
+	height: 85vh;
+	position: relative;
+	top: 20px;
+	border-left: 3px solid gray;
 }

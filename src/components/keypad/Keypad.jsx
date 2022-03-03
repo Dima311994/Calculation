@@ -5,16 +5,17 @@ export default class Keypad extends PureComponent {
     super(props);
   }
 
-  
-
- 
   render() {
     return (
       <div className="keypad-cont">
         {numberOperand.map((i, index) => {
           return (
             <div key={index} className="btn-cont-keypad">
-              <button className="btn-keypad" onClick={this.props.handleClick(i)}>
+              <button
+                className="btn-keypad"
+                value={i}
+                onClick={this.props.mathHandle}
+              >
                 {i}
               </button>
             </div>

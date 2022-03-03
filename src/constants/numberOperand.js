@@ -1,5 +1,5 @@
 const numberOperand = [
-  "С",
+  "C",
   "7",
   "8",
   "9",

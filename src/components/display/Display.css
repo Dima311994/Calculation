@@ -1,6 +1,6 @@
 .display-cont {
-	width: 90%;
-	margin-left: 65px;
+  width: 90%;
+  margin-left: 65px;
   height: 20vh;
   display: flex;
   justify-content: flex-end;
@@ -12,5 +12,5 @@
 .output-result {
   text-align: end;
   margin-right: 20px;
-  font-size: 2rem;
+  font-size: 4rem;
 }

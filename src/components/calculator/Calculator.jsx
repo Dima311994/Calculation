@@ -7,12 +7,14 @@ export default class DisplayKeypad extends Component {
     super(props);
     this.state = {
       out: "",
+      isZero: true,
     };
   }
   calculate = () => {
     const result = eval(this.state.out);
     this.setState({
-      out: result,
+      out: result.toFixed(2),
+      isZero: false,
     });
   };
 
@@ -21,7 +23,7 @@ export default class DisplayKeypad extends Component {
     const value = e.target.value;
     switch (value) {
       case "CE":
-        this.setState({ out: "" });
+        this.setState({ out: "", isZero: true });
         break;
       case "=":
         this.calculate();
@@ -32,14 +34,14 @@ export default class DisplayKeypad extends Component {
         });
         break;
       default:
-        this.setState({ out: output + value });
+        this.setState({ out: output + value, isZero: false });
     }
   };
 
   render() {
     return (
       <div className="display-keypad-cont">
-        <Display defaultValue={this.state.out} />
+        <Display defaultValue={this.state.out} isZero={this.state.isZero} />
         <Keypad mathHandle={this.handleClick} />
       </div>
     );

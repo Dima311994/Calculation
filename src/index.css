@@ -3,7 +3,7 @@
 @import "./components/keypad/Keypad.css";
 @import "./components/history/History.css";
 @import "./App.css";
-@import "./components/display-keypad/DisplayKetpad.css";
+@import "./components/calculator/Calculator.css";
 
 * {
   margin: 0;

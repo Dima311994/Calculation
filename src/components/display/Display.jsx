@@ -9,7 +9,7 @@ export default class Display extends Component {
     return (
       <div className="display-cont">
         <div className="output-result">
-        {this.props.defaultValue}
+        {!this.props.isZero ? this.props.defaultValue : '0'}
       </div>
 	  </div>
     );

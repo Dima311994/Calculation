@@ -5,10 +5,10 @@ import Calculator from "../calculator/Calculator";
 export default class ControlPanel extends Component {
   render() {
     return (
-        <div className="cont-display-key-history">
-          <Calculator />
-          <History />
-        </div>
+      <div className="cont-display-key-history">
+        <Calculator />
+        <History />
+      </div>
     );
   }
 }

@@ -16,15 +16,13 @@ export default class SettingPage extends Component {
 
   handleMode = (mode) => {
     window.localStorage.setItem("theme", mode);
-
     this.setState({theme: mode });
-	const localTheme = window.localStorage.getItem("theme");
-    localTheme && this.setState({theme:localTheme});
   };
 
-  
-    
-  
+  componentDidMUpdate() {
+    const localTheme = window.localStorage.getItem("theme");
+    localTheme && this.setState({theme:localTheme});
+  }
 
   handleToggle = () => {
     if (this.state.theme === "Light Theme") {
@@ -33,13 +31,10 @@ export default class SettingPage extends Component {
     if (this.state.theme === "Dark Theme") {
       this.setState({ theme: "Light Theme" });
     }
-    if (this.state.theme === "Color Theme") {
-      this.setState({ theme: "Color Theme" });
-    }
   };
  
   render() {
-	const themeMode = this.theme === 'Light Theme' ? lightTheme : darkTheme;
+	const themeMode = this.state.theme === 'Light Theme' ? lightTheme : darkTheme;
     return (
 		<ThemeProvider theme={themeMode}>
         <GlobalStyles />

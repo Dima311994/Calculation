@@ -41,16 +41,20 @@ export default class Calculator extends Component {
           res: output + value,
           out: output + value,
           isZero: false,
-          operation: [...this.state.out, ...value].join(""),
+          operation: [...this.state.out, ...value] /* .join("") */,
         });
-
-        localStorage.setItem("operation", JSON.stringify(this.state.operation));
     }
     console.log(this.state.operation);
-	console.log(this.state.arr);
+    console.log(this.state.arr);
   };
   componentDidMount() {
-    this.setState({ operation: JSON.parse(localStorage.getItem("operation")) });
+    this.setState({ operation: JSON.parse(localStorage.getItem(`operation`)) });
+  }
+  componentDidUpdate() {
+    localStorage.setItem(
+      `operation${localStorage.length}`,
+      JSON.stringify(this.state.operation)
+    );
   }
   render() {
     return (

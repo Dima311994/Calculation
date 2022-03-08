@@ -23,10 +23,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: #000;
-}
-
-.myArrowClassName {
-  margin-top: 8px;
+  outline: none;
 }
 
 .btn-clear {

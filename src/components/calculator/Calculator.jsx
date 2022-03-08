@@ -14,17 +14,16 @@ export default class Calculator extends Component {
     };
   }
   calculate = () => {
-    let a = JSON.parse(localStorage.getItem("operation"));
-    console.log(a);
+    let operationLocalStorage = JSON.parse(localStorage.getItem("operation"));
     const result = eval(this.state.out);
     this.setState({
       res: result.toFixed(2),
       isZero: false,
     });
-    if (a) {
+    if (operationLocalStorage) {
       localStorage.setItem(
         `operation`,
-        JSON.stringify([...a, [...this.state.operation]])
+        JSON.stringify([...operationLocalStorage, [...this.state.operation]])
       );
     } else {
       localStorage.setItem(

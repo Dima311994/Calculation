@@ -1,35 +1,42 @@
+import React, { Component } from "react";
 import Header from "./components/header/Header";
 import SettingPage from "./components/setting-page/SettingPage";
 import { Route, Routes } from "react-router-dom";
 import Calculator from "./components/calculator/Calculator";
 
-function App() {
-  const setColor = (color) => localStorage.setItem("Color", color);
-  const getColor = () => localStorage.getItem("Color");
+export default class App extends Component {
+  setColor = (color) => localStorage.setItem("Color", color);
+  getColor = () => localStorage.getItem("Color");
 
-  const setColorFont = (colorFont) => localStorage.setItem("Font", colorFont);
-  const getColorFont = () => localStorage.getItem("Font");
+  handleColor = (e) => {
+    this.setColor(e.target.value);
 
-  const handleColor = (e) => {
-    setColor(e.target.value);
-	setColorFont(e.target.value)
-    document.body.style.backgroundColor = getColor();
-	document.body.style.color = getColorFont()
+    document.body.style.backgroundColor = this.getColor();
+    if (localStorage.getItem("Color") === "black") {
+      document.body.style.color = "white";
+    } else {
+      document.body.style.color = "black";
+    }
   };
-  document.body.style.backgroundColor = getColor();
-  document.body.style.color = getColorFont();
-  return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Calculator />} />
-        <Route
-          path="/setting"
-          element={<SettingPage changeTheme={handleColor} />}
-        />
-      </Routes>
-    </>
-  );
-}
 
-export default App;
+  render() {
+    document.body.style.backgroundColor = this.getColor();
+    if (localStorage.getItem("Color") === "black") {
+      document.body.style.color = "white";
+    } else {
+      document.body.style.color = "black";
+    }
+    return (
+      <>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Calculator />} />
+          <Route
+            path="/setting"
+            element={<SettingPage changeTheme={this.handleColor} />}
+          />
+        </Routes>
+      </>
+    );
+  }
+}

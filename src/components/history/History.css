@@ -6,12 +6,12 @@
   border-left: 3px solid gray;
 }
 
-.history-title{
-	text-align: center;
-	font-size: 2rem;
+.history-title {
+  text-align: center;
+  font-size: 2rem;
 }
 
-.history-operation{
-	margin: 30px 0 0 30px;
-	font-size: 1.8rem;
+.history-operation {
+  margin: 30px 0 0 30px;
+  font-size: 1.8rem;
 }

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "react-dropdown/style.css";
 
 export default class SettingPage extends Component {
   handleClear = () => {

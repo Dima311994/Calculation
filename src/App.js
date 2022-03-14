@@ -14,7 +14,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: "light",
+      theme: "",
     };
   }
 
@@ -50,7 +50,7 @@ export default class App extends Component {
             <Route path="/" element={<Calculator />} />
             <Route
               path="/setting"
-              element={<SettingPage changeTheme={this.themeToggler} />}
+              element={<SettingPage changeTheme={this.themeToggler}/>}
             />
           </Routes>
         </ThemeProvider>

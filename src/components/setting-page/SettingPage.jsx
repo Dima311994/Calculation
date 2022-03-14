@@ -5,15 +5,20 @@ export default class SettingPage extends Component {
     localStorage.clear();
   };
   render() {
+    const selected = localStorage.getItem("Color");
     return (
       <div className="setting-cont">
         <p className="setting-cont_title">Settings</p>
         <div>
           <p className="title-theme">Switch Theme</p>
-          <select className="dropdown-theme" onChange={this.props.changeTheme}>
+          <select
+            defaultValue={selected}
+            className="dropdown-theme"
+            onChange={this.props.changeTheme}
+          >
             <option value="light">Light Theme</option>
             <option value="dark">Dark Theme</option>
-            <option value="cornsilk">Colored Theme</option>
+            <option value="colored">Colored Theme</option>
           </select>
         </div>
         <div>

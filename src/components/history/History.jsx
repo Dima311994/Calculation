@@ -9,7 +9,6 @@ export default class History extends Component {
         <p className="history-title">History</p>
         <div className="history-operation">
           {historyElem ? historyElem.map((i, index) => {
-            console.log(i);
             return <div key={index}>{i.join("")}</div>;
           }) : 'History Clear'}
         </div>

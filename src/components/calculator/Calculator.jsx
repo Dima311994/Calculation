@@ -15,21 +15,20 @@ export default class Calculator extends Component {
   }
   calculate = () => {
     let operationLocalStorage = JSON.parse(localStorage.getItem("operation"));
+    const setOperation = JSON.stringify([
+      ...operationLocalStorage,
+      [...this.state.operation],
+    ]);
+    const emptySetOperation = JSON.stringify([[...this.state.operation]]);
     const result = eval(this.state.out);
     this.setState({
       res: result.toFixed(2),
       isZero: false,
     });
     if (operationLocalStorage) {
-      localStorage.setItem(
-        `operation`,
-        JSON.stringify([...operationLocalStorage, [...this.state.operation]])
-      );
+      localStorage.setItem(`operation`, setOperation);
     } else {
-      localStorage.setItem(
-        `operation`,
-        JSON.stringify([[...this.state.operation]])
-      );
+      localStorage.setItem(`operation`, emptySetOperation);
     }
   };
 
@@ -57,7 +56,7 @@ export default class Calculator extends Component {
         });
     }
   };
- 
+
   render() {
     return (
       <div className="cont-display-key-history">

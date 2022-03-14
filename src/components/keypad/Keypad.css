@@ -1,5 +1,7 @@
 .keypad-cont {
+  width: 1400px;
   height: 70vh;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

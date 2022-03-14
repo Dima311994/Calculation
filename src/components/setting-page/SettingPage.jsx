@@ -11,8 +11,8 @@ export default class SettingPage extends Component {
         <div>
           <p className="title-theme">Switch Theme</p>
           <select className="dropdown-theme" onChange={this.props.changeTheme}>
-            <option value="white">Light Theme</option>
-            <option value="black">Dark Theme</option>
+            <option value="light">Light Theme</option>
+            <option value="dark">Dark Theme</option>
             <option value="cornsilk">Colored Theme</option>
           </select>
         </div>

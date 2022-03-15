@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./components/header/Header";
 import SettingPage from "./components/setting-page/SettingPage";
 import { Route, Routes } from "react-router-dom";
-import Calculator from "./components/calculator/Calculator";
+import CalculatorComponent from "./components/calculator/CalculatorComponent";
 import { GlobalStyles } from "./styled-components/GlobalStyles";
 import {
   lightTheme,
@@ -47,7 +47,7 @@ export default class App extends Component {
           <GlobalStyles />
           <Header />
           <Routes>
-            <Route path="/" element={<Calculator />} />
+            <Route path="/" element={<CalculatorComponent />} />
             <Route
               path="/setting"
               element={<SettingPage changeTheme={this.themeToggler}/>}

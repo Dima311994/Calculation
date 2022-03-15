@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-
+import { storageHistory } from "../../utils/command";
 export default class SettingPage extends Component {
   handleClear = () => {
-    localStorage.clear();
+    localStorage.removeItem("history");
+    storageHistory.length = 0;
   };
   render() {
     const selected = localStorage.getItem("Color");
